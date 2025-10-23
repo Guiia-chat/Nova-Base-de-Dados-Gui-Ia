@@ -1,0 +1,1 @@
+# Nova-Base-de-Dados-Gui-Ia
