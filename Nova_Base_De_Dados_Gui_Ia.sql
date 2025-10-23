@@ -1,0 +1,37 @@
+create database if not exists Chat_bot_Guiia;
+use Chat_bot_Guiia;
+
+drop table Chat_bot;
+create table Chat_bot(
+id int auto_increment primary key,
+pergunta varchar (255),
+resposta text
+);
+select * from Chat_bot;
+
+INSERT INTO Chat_bot(pergunta, resposta) VALUES 
+('Qual o conteúdo principal da Apostila?', 'A apostila é um guia definitivo para a gestão e o uso de software de Inteligência Artificial, com foco principal na Engenharia de Prompt. Ela explora a evolução da tecnologia, desde a Revolução Industrial, até o surgimento das IAs, e analisa o impacto delas em diversas áreas como saúde, educação e indústria. O objetivo é fornecer um guia completo, e não apenas uma "receita de bolo", para que o leitor saiba manipular, gerenciar e utilizar todas as tecnologias.'),
+('O que é Inteligência Artificial e quais são seus fundamentos?', 'A Inteligência Artificial (IA) é um ramo da computação que cria sistemas e máquinas capazes de imitar funções humanas, como raciocínio, aprendizagem e tomada de decisões. Ela funciona por meio de algoritmos inteligentes que processam enormes volumes de dados, alimentando sistemas de Machine Learning (ML) e Deep Learning. O conceito de prompt foi massivamente difundido após 2019 e se refere a todo ato em que o usuário se comunica com um software de IA para trocar informações ou criar arquivos. O LLM (Large Language Model) é um tipo de IA feito para criar e entender textos. Sua evolução, impulsionada pelo Transformer (2017), marcou a entrada na era da IA generativa.'),
+
+-- Capítulo 2: A Arte do Prompt
+('Como criar um prompt eficaz?', 'Um prompt eficaz exige clareza e detalhamento. Você deve: 1. Definir um papel (persona) para a IA ("Você é um professor"); 2. Fornecer detalhes sobre a situação ou público-alvo; 3. Usar exemplos e formatos para mostrar a estrutura esperada (tabela, lista); 4. Estabelecer Limites (tamanho da resposta ou o que deve ser evitado); 5. Refinar a conversa se a primeira resposta não for perfeita. A qualidade da resposta depende diretamente da qualidade da instrução dada.'),
+('Quais as principais técnicas de prompt?', 'As principais técnicas são estratégias para otimizar a interação: Zero-shot Prompting (comando direto, sem exemplos); Few-shot Prompting (comando com 1 a 5 exemplos para guiar o formato); Chain-of-Thought (CoT) (treina o modelo para explicar o raciocínio em etapas antes da resposta final, ideal para problemas complexos); Self-consistency (gera diversas respostas a partir de um único prompt e escolhe a mais consistente); e Tree of Thought (usa uma estrutura ramificada para explorar múltiplas linhas de raciocínio, útil para tomadas de decisão.'),
+('Quais os elementos essenciais para um prompt bem elaborado?', 'Existem 10 elementos considerados mandatórios para guiar a IA: Definir um papel (persona), Objetivo claro, Fornecer detalhes e contexto, Usar exemplos, Definir o formato ideal (tabela, lista), Estabelecer limites (tamanho), Especificar o tom, Dizer o que evitar, Critério de qualidade e Iteração e refinamento (ajustar a conversa). Esses elementos garantem foco e utilidade na resposta.'),
+
+-- Capítulo 3: Os 6 Aspectos Importantes
+('Quais são os 6 aspectos fundamentais de um prompt eficiente?', 'Os 6 aspectos fundamentais para criar prompts eficientes são: Definir um Papel (ajusta a linguagem), Fornecer Detalhes (contexto e público-alvo), Usar Exemplos e Formatos (estrutura da resposta), Estabelecer Limites (restrições de tamanho/foco), Especificar Tom e Linguagem (formal, informal, simples ou técnica) e Refinar a Conversa (pedir ajustes e expansões para aperfeiçoar o resultado.'),
+('Como a escolha de palavras influencia a IA?', 'A escolha de palavras tem um impacto direto na qualidade da resposta, pois a IA trabalha com análise preditiva de padrões. Palavras-chave funcionam como âncoras de contexto. Adjetivos (como "simples" ou "detalhado") modulam o tom e a profundidade. Imperativos (verbos de ação como "Liste", "Crie") dão ordens claras sobre a ação esperada. Além disso, definir uma "personalidade" (ex: "professor") faz a IA ajustar o vocabulário e o estilo da resposta.'),
+
+-- Capítulo 4: As 20 Técnicas Usadas para IAs Generativas (GenAI)
+('Quais são exemplos de técnicas de prompt avançadas (GenAI)?', 'As técnicas avançadas guiam os resultados da IA, sendo algumas delas: Role Prompting (atribuir um papel), Zero/Few-Shot (com ou sem exemplos), Chain of Thought (pedir raciocínio em etapas), Delimitação de Formato (lista, tabela), Analogias e Metáforas (explicar algo complexo por comparação), Simulação de Cenários (criar situações fictícias), Explicação Progressiva (simples para complexo) e Ajuste de Tom e Voz (engraçado, formal).'),
+('Como usar múltiplas técnicas juntas?', 'Você pode combinar técnicas para resultados mais ricos. Exemplo: "Finja ser um professor (Role Prompting). Explique a Revolução Industrial (Zero-shot) em forma de diálogo (Papéis múltiplos). Use analogias simples (Analogia) e limite a 150 palavras (Restrição)."'),
+
+-- Capítulo 5: O Futuro das Interações Humanas a IA
+('O que são modelos multimodais? (5.1)', 'Modelos multimodais são a vanguarda da IA, pois processam e interpretam diferentes tipos de dados simultaneamente, como texto, imagens, vídeos e áudios (Ex: ChatGPT, Gemini). Eles entregam respostas mais completas, pois sua análise é mais abrangente. Suas oportunidades estão na precisão das respostas, mas os riscos incluem a necessidade de aprendizado contínuo e questões de privacidade, já que precisam acessar informações sensíveis.'),
+('O que são modelos autônomos? (5.2)', 'Modelos autônomos são capazes de agir sozinhos com base em metas previamente estabelecidas, sem supervisão humana constante (Ex: Tesla Autopilot). As maiores oportunidades estão no aumento da produtividade e na capacidade de resolver problemas técnicos e complexos, como em operações de resgate. Os principais riscos são a perda de controle em caso de falha, o mau uso intencional (ciberataques) e o receio da substituição de funções humanas em tarefas repetitivas.'),
+
+-- Capítulo 6: Desafios da Engenharia de Prompts
+('Quais os desafios da Engenharia de Prompt e da IA atualmente?', 'Os desafios centrais na era moderna são: 1. Complexidade Crescente dos Modelos (que se tornam mais avançados e exigem prompts mais precisos para guiar os bilhões de parâmetros) e 2. Ética e Responsabilidade (evitar que prompts mal formulados gerem conteúdo nocivo, preconceituoso ou falso). A preocupação ética envolve também segurança e privacidade de dados sensíveis.'),
+('Como lidar com a complexidade crescente dos modelos? (6.1)', 'Para otimizar o uso de modelos complexos e reduzir o desperdício de recursos, deve-se aplicar: Templates de Prompts (padronização), Filtragem e Pós-processamento (solicitar respostas parciais para refinar a saída) e Treinamento com dados especializados (para melhor compreensão do contexto).'),
+('Como garantir ética e segurança ao usar IAs? (6.2)', 'A garantia de segurança e ética é fundamental. As medidas incluem: Auditoria Constante (revisar prompts e resultados para identificar vieses), Implementação de Filtros de Segurança (bloquear respostas nocivas e delimitar a interação do usuário) e Privacidade by Design (aplicar anonimização e criptografia para proteger dados pessoais e sensíveis.');
+select * from Chat_bot;
